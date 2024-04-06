@@ -1,0 +1,84 @@
+<p-toast position="top-center" key="tc"></p-toast>
+<div class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 shadow-lg mt-5 mb-5 text-center rounded-3  col-sm-12">
+            <h3 class="text-center p-3">Sign-Up</h3>
+            <form class="example-form container" [formGroup]="signupForm" (ngSubmit)="signupForm.valid && onSubmit()">
+                <div class="row d-flex">
+                    <div class="col">
+                        <mat-form-field class="example-full-width form-group">
+                            <mat-label>username</mat-label>
+                            <input matInput formControlName="username">
+                            <mat-error *ngIf="username.hasError('pattern') && !username.hasError('required')">Please enter a valid Username</mat-error>
+                            <mat-error *ngIf="username.hasError('required')">
+                                username is required</mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row d-flex">
+                <div class="col">
+                    <mat-form-field class="example-full-width form-group">
+                        <mat-label>Class</mat-label>
+                        <mat-select formControlName="class">
+                            <mat-option value="1">1</mat-option>
+                            <mat-option value="2">2</mat-option>
+                            <mat-option value="3">3</mat-option>
+                            <mat-option value="4">4</mat-option>
+                            <mat-option value="5">5</mat-option>
+                            <mat-option value="6">6</mat-option>
+                            <mat-option value="7">7</mat-option>
+                            <mat-option value="8">8</mat-option>
+                            <mat-option value="9">9</mat-option>
+                            <mat-option value="10">10</mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="class.hasError('required')">class is required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field class="example-full-width form-group">
+                        <mat-label>syllabus</mat-label>
+                        <mat-select formControlName="syllabus">
+                            <mat-option value="ICSE">ICSE</mat-option>
+                            <mat-option value="CBSE">CBSE</mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="syllabus.hasError('required')">syllabus is required</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+                <div class="row d-flex">
+                    <div class="col">
+                        <mat-form-field class="example-full-width form-group">
+                            <mat-label>email</mat-label>
+                            <input matInput formControlName="email" >
+                            <mat-error *ngIf="Email.hasError('required')">email is required</mat-error>
+                            <mat-error *ngIf="Email.hasError('pattern')">
+                                email should end with @gmail.com</mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row d-flex mb-5">
+                    <div class="col">
+                        <mat-form-field class="example-full-width form-group">
+                            <mat-label>password</mat-label>
+                            <input type="password" id="password" matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+                            <mat-hint *ngIf="Password.valid">Looks Strong Like You!</mat-hint>
+                            <mat-error *ngIf="Password.hasError('pattern') && !Password.hasError('required')">Password must include 1 uppercase, 1 special symbol and 1 number</mat-error>
+                            <mat-error *ngIf="Password.hasError('required')">
+                                password is required</mat-error>
+                            <a mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </a>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col pb-5">
+                    <p class=" pt-1 text-secondary d-flex justify-content-center"><a routerLink="/login" class="text-decoration-none">Already have
+                            an account?Login!</a></p>
+                    <button mat-raised-button color="primary" type="submit" class="example-full-width">
+                        Register
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

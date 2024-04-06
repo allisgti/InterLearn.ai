@@ -1,0 +1,56 @@
+{
+  "userdetails": [
+    {
+      "id": "59c1",
+      "username": "Allain",
+      "email": "allain@gmail.com",
+      "password": "Allain@123",
+      "class": "1",
+      "syllabus": "ICSE"
+    }
+  ],
+  "courses":[
+    {
+        "id":"1",
+        "courseid":"1",
+        "courseImage":"/assets/subject/socialscience.png",
+        "courseName":"Science"
+    },
+    {
+        "id":"2",
+        "courseid":"2",
+        "courseImage":"/assets/subject/download.jpeg",
+        "courseName":"Social Science"
+    }
+  ],
+  "chapters":[
+    {
+        "id":"1",
+        "topicid":"1",
+        "courseid":"1",
+        "chapter":"Coal and Petroleum",
+        "chapterImage":""
+    },
+    {
+        "id":"2",
+        "topicid":"2",
+        "courseid":"1",
+        "chapter":"Crop Production and Management",
+        "chapterImage":""
+    }
+  ],
+  "topics":[
+    {
+        "id":"1",
+        "topicid":"1",
+        "topicName":"Renewable and Non-Renewable Energy",
+        "topicImage":""
+    },
+    {
+        "id":"2",
+        "topicid":"1",
+        "topicName":"Natural Gas",
+        "topicImage":""
+    }
+  ]
+}

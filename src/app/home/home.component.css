@@ -1,0 +1,6 @@
+.img-responsive{
+    background-image: url('/assets/logo/home.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+}
